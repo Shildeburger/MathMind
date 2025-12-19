@@ -13,3 +13,4 @@ export const trpcRouter = trpc.router({
     return { gamemods };
   }),
 });
+export type TrpcRouter = typeof trpcRouter;
