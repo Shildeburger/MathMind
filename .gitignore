@@ -1,1 +1,5 @@
 node_modules
+dist/
+.pnpm-workspace-state-v1.json
+.modules.yaml*.backup
+*.backup/
