@@ -1,4 +1,6 @@
-export const App = () => {
+import { TrpcProvider } from './lib/trpc';
+
+export const GamemodsPage = () => {
   const gamemods = [
     { key: 'classic', name: 'Classic', description: 'classic' },
     { key: 'timed', name: 'Timed', description: 'timed' },
@@ -10,4 +12,12 @@ export const App = () => {
       <p>{mod.description}</p>
     </div>
   ));
+};
+
+export const App = () => {
+  return (
+    <TrpcProvider>
+      <GamemodsPage />
+    </TrpcProvider>
+  );
 };
