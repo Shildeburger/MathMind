@@ -5,6 +5,10 @@
   "devDependencies": {
     "@types/express": "^5.0.6",
     "concurrently": "^9.2.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-standard-with-typescript": "^43.0.1",
     "prettier": "^3.7.4",
     "rimraf": "^6.1.2",
     "ts-node": "^10.9.2",
@@ -19,6 +23,7 @@
     "w": "pnpm --filter @mathmind/webapp",
     "dev": "pnpm -r --parallel dev",
     "types": "concurrently \"pnpm b types\" \"pnpm w types\"",
-    "prettyfy": "pnpm -r --parallel prettyfy"
+    "prettify": "pnpm -r --parallel prettify",
+    "lint": "concurrently \"pnpm b lint\" \"pnpm w lint\""
   }
 }
