@@ -8,6 +8,8 @@ const gamemods = [
   { key: 'challenge', name: 'Challenge', description: 'challenge' },
 ];
 
+const a: number = '5'; // to test husky pre-commit hook for types
+
 export const trpcRouter = trpc.router({
   getGameMode: trpc.procedure.query(() => {
     return { gamemods };
