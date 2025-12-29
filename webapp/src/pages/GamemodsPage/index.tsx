@@ -1,4 +1,6 @@
 import { trpc } from '../../lib/trpc';
+import { Link } from 'react-router-dom';
+import { getStandardModeRoute } from '../../lib/routes';
 
 export const GamemodsPage = () => {
   const { data, error, isLoading, isFetching, isError } = trpc.getGameMode.useQuery();
@@ -14,7 +16,9 @@ export const GamemodsPage = () => {
       <h1>Game Mods</h1>
       {data?.gamemods.map((mod) => (
         <div key={mod.key}>
-          <h2>{mod.name}</h2>
+          <h2>
+            <Link to={getStandardModeRoute({ MathMind: mod.key })}>{mod.name}</Link>
+          </h2>
           <p>{mod.description}</p>
         </div>
       ))}
