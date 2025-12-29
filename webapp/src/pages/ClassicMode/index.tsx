@@ -1,9 +1,13 @@
 import { useParams } from 'react-router-dom';
+import type { classicModeRouteParams } from '../../lib/routes';
 
 export const ClassicMode = () => {
-  const { MathMind } = useParams() as { MathMind: string };
+  const { MathMind } = useParams() as classicModeRouteParams;
   return (
     <div>
+      <div>
+        <p>Profile</p>
+      </div>
       <h1>{MathMind}</h1>
       <div>
         <h2>Select difficulty</h2>
